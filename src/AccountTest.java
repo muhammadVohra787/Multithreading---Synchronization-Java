@@ -7,7 +7,7 @@ public class AccountTest {
     public static void main(String[] args) {
         Account account = new Account(1000.0);
         System.out.println("Initial Balance is: " + account.balance);
-        try (ExecutorService executor = Executors.newFixedThreadPool(3)) {
+        try (ExecutorService executor = Executors.newFixedThreadPool(4)) {
 
             ArrayList<Transaction> transactions = new ArrayList<>();
             transactions.add(new Transaction(account, "deposit", 200.0));
